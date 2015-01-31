@@ -156,7 +156,9 @@ function clearDisplay() {
 // var options = {
 // valueNames: [ "First Name",  "Last Name", "Month", "Date", "Year"]};
 
-var values = [];
+var values = [{fn: "Hazel", ln: "Zheng", m: "04", d: "07", y: "1996"},
+{fn: "Lily", ln: "Nguyen", m: "11", d: "03", y: "1996"},
+{fn: "Sophia", ln: "Liu", m: "06", d: "07", y: "1996"}];
 //var bdlist = new List('users', options, values);
 
 
@@ -166,31 +168,29 @@ function createBD(fname, lname, mm, dd, yyyy){
    //    return false;
    // }
    validateForm();
-   values.push({fn: fname, ln: lname, m: mm, d: dd, y: yyyy});
+   values.push({fn: fname, ln: lname, n: mm, d: dd, y: yyyy});
    updateTable();
 }
 
 function updateTable(){
    var scope = this;
-   
-
 }
 
 //Table Sorting
 function SortableTableCtrl() {
     var scope = this;
-    scope.body = values;
+
     // data
     scope.head = {
         fn: "First Name",
         ln: "Last Name",
         m: "Month",
-        d: "Date",
+        n: "Date",
         y: "Year"
     };
-    
+    scope.body = values;
     scope.sort = {
-        column: 'b',
+        column: 'fn',
         descending: false
     };
 
