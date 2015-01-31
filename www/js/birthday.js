@@ -209,3 +209,11 @@ function SortableTableCtrl() {
     };
 }
 
+function compareDate(m,d){
+  var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+  var firstDate = new Date();
+  var secondDate = new Date(firstDate.getFullYear(), m,d);
+  var diffDays = Math.round(Math.abs((firstDate.getTime() - 
+                 secondDate.getTime())/(oneDay)));
+  return diffDays;
+}
