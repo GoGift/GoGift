@@ -4,4 +4,4 @@
 node_modules/
 platforms/
 plugins/
-!platforms/ios/GoGift/Resources/splash
+!platforms/ios/gogift/resources/splash
