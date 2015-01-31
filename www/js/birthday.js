@@ -12,14 +12,26 @@
 
 // listObj.filter(); 
 
-window.onload = init;
+window.onload = function(){
+   init();
+};
  
 // The "onload" handler. Run after the page is fully loaded.
 function init() {
    // Attach "onsubmit" handler
-   document.getElementById("theForm").onsubmit = validateForm;
+   document.getElementById("submit").onclick = function(){
+      createBD(
+         document.getElementById("lastname"),
+         document.getElementById("firstname"),
+         document.getElementById("month"),
+         document.getElementById("date"),
+         document.getElementById("year")
+      );
+   };
    // Attach "onclick" handler to "reset" button
-   document.getElementById("reset").onclick = clearDisplay;
+   document.getElementById("reset").onclick = function(){
+      clearDisplay();
+   };
    // Set initial focus
    document.getElementById("firstname").focus();
 }

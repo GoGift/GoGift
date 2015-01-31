@@ -8,12 +8,7 @@
 <body>
   <h2>Test JavaScript Form Validation</h2>
  
-  <form id="theForm" method="post" onsubmit="createBD(
-      document.getElementById("lastname"),
-      document.getElementById("firstname"),
-      document.getElementById("month"),
-      document.getElementById("date"),
-      document.getElementById("year"))">
+  <form id="theForm" method="post">
     <table>
     <tr>
       <td>First Name<span class="red">*</span></td>
@@ -37,7 +32,7 @@
 
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" value="SUBMIT" id="submit"/>&nbsp;
+      <td><button type="button" value="SUBMIT" id="submit"/></button>
           <input type="reset" value="CLEAR" id="reset"/></td>
       <td>&nbsp;</td></tr>
     </table>
