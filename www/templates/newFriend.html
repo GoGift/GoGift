@@ -1,11 +1,35 @@
 <ion-view title="Friend-Add">
 	<div id="task-view" class="modal slide-in-up">
+
 	    <header class="bar bar-header bar-secondary">
+	    	<!--TODO: Change title -->
 	        <h1 class="title">New Task</h1>
 	        <button class="button button-clear button-primary" ng-click="closeFriendModal()">Cancel</button>
 	    </header>
 	    <ion-content class="padding has-header">
-	        <input type="text" placeholder="I need to do this...">
+	    	<!-- Content goes here-->
+	        <form name="theForm" id="theForm" novalidate method="post">
+			     First Name<span class="red">*</span>
+			     <input type="text" id="firstname" name="firstname" required ng-model="newFriend.fname"/>
+			   
+			     Last Name
+			     <input type="text" id="lastname" name="lastname" required ng-model="newFriend.lname"/>
+			   
+			     Month<span class="red">*</span>
+			     <input type="number" id="month" name="month" required min="0" max="12" ng-model="newFriend.month"/>
+			      
+			   
+			     Date<span class="red">*</span>
+			     <input type="number" id="date" name="date" required min="0" max="31" ng-model="newFriend.day"/>
+
+			   
+			     Year<span class="red">*</span>
+			     <input type="number" id="year" name="year" required min="1900" max="2015" ng-model="newFriend.year"/>
+
+			   
+			     <button type="submit" value="SUBMIT" id="submit" ng-click="addFriend(newFriend)">Submit</button>
+			          <input type="reset" value="CLEAR" id="reset"/>
+			</form>
 	    </ion-content>
 	</div>
 </ion-view>
