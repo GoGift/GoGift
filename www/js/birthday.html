@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Test JavaScript Form Validation</title>
+ <!-- <link rel="stylesheet" href="FormValidation.css"> -->
+  <script type="text/javascript" src="../js/birthday.js" ></script>
+</head>
+ 
+<body>
+  <h2>Test JavaScript Form Validation</h2>
+ 
+  <form id="theForm" method="post" onsubmit="createBD(
+      document.getElementById("lastname"),
+      document.getElementById("firstname"),
+      document.getElementById("month"),
+      document.getElementById("date"),
+      document.getElementById("year"))">
+    <table>
+    <tr>
+      <td>First Name<span class="red">*</span></td>
+      <td><input type="text" id="firstname" name="firstname"/></td>
+      <td id="nameError" class="red">&nbsp;</td></tr>
+    <tr>
+      <td>Last Name</td>
+      <td><input type="text" id="lastname" name="lastname" /></td>
+      <td id="nameError" class="red">&nbsp;</td></tr>
+    <tr>
+      <td>Month<span class="red">*</span></td>
+      <td><input type="text" id="month" name="month" /></td>
+      
+    <tr>
+      <td>Date<span class="red">*</span></td>
+      <td><input type="text" id="date" name="date" /></td>
+
+    <tr>
+      <td>Year<span class="red">*</span></td>
+      <td><input type="text" id="year" name="year" /></td>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="SUBMIT" id="submit"/>&nbsp;
+          <input type="reset" value="CLEAR" id="reset"/></td>
+      <td>&nbsp;</td></tr>
+    </table>
+  </form>
+</body>
+</html>
