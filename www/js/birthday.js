@@ -19,21 +19,30 @@ window.onload = function(){
 // The "onload" handler. Run after the page is fully loaded.
 function init() {
    // Attach "onsubmit" handler
-   document.getElementById("submit").onclick = function(){
+   $('body').on('click', '#submit', function(){
       createBD(
-         document.getElementById("firstname"),
-         document.getElementById("lastname"),
-         document.getElementById("month"),
-         document.getElementById("date"),
-         document.getElementById("year")
+         $("#firstname"),
+         $("#lastname"),
+         $("#month"),
+         $("#date"),
+         $("#year")
       );
-   };
+   });
+   // document.getElementById("submit").onclick = function(){
+   //    createBD(
+   //       document.getElementById("firstname"),
+   //       document.getElementById("lastname"),
+   //       document.getElementById("month"),
+   //       document.getElementById("date"),
+   //       document.getElementById("year")
+   //    );
+   // };
    // Attach "onclick" handler to "reset" button
-   document.getElementById("reset").onclick = function(){
-      clearDisplay();
-   };
-   // Set initial focus
-   document.getElementById("firstname").focus();
+   // document.getElementById("reset").onclick = function(){
+   //    clearDisplay();
+   // };
+   // // Set initial focus
+   // document.getElementById("firstname").focus();
 }
  
 /* The "onsubmit" handler to validate the input fields.
@@ -167,8 +176,8 @@ function createBD(fname, lname, mm, dd, yyyy){
    //    console.log("the input should be in correct form!");
    //    return false;
    // }
-   validateForm();
-   values.push({fn: fname, ln: lname, n: mm, d: dd, y: yyyy});
+   // validateForm();
+   values.push({fn: fname, ln: lname, m: mm, n: dd, y: yyyy});
    updateTable();
 }
 
@@ -209,3 +218,11 @@ function SortableTableCtrl() {
     };
 }
 
+function compareDate(m,d){
+  var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+  var firstDate = new Date();
+  var secondDate = new Date(firstDate.getFullYear(), m,d);
+  var diffDays = - Math.round((firstDate.getTime() - 
+                 secondDate.getTime())/(oneDay));
+  return diffDays;
+}
