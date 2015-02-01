@@ -3,32 +3,31 @@
 
 	    <header class="bar bar-header bar-secondary">
 	    	<!--TODO: Change title -->
-	        <h1 class="title">New Task</h1>
+	        <h1 class="title">Add Birthday</h1>
 	        <button class="button button-clear button-primary" ng-click="closeFriendModal()">Cancel</button>
 	    </header>
 	    <ion-content class="padding has-header">
 	    	<!-- Content goes here-->
 	        <form name="theForm" id="theForm" novalidate method="post">
 			     First Name<span class="red">*</span>
-			     <input type="text" id="firstname" name="firstname" required ng-model="newFriend.fname"/>
+			     <input type="text" id="firstname" name="firstname" required ng-model="newFriend.fname" placeholder="First name"/>
 			   
-			     Last Name
-			     <input type="text" id="lastname" name="lastname" required ng-model="newFriend.lname"/>
+			     Last Name*
+			     <input type="text" id="lastname" name="lastname" required ng-model="newFriend.lname" placeholder="Last name"/>
 			   
 			     Month<span class="red">*</span>
-			     <input type="number" id="month" name="month" required min="0" max="12" ng-model="newFriend.month"/>
+			     <input type="number" id="month" name="month" required min="0" max="12" ng-model="newFriend.month" placeholder="month (mm)"/>
 			      
 			   
 			     Date<span class="red">*</span>
-			     <input type="number" id="date" name="date" required min="0" max="31" ng-model="newFriend.day"/>
+			     <input type="number" id="date" name="date" required min="0" max="31" ng-model="newFriend.day" placeholder="date (dd)"/>
 
 			   
 			     Year<span class="red">*</span>
-			     <input type="number" id="year" name="year" required min="1900" max="2015" ng-model="newFriend.year"/>
+			     <input type="number" id="year" name="year" required min="1900" max="2015" ng-model="newFriend.year" placeholder="year (yyyy)"/>
 
-			   
-			     <button type="submit" value="SUBMIT" id="submit" ng-click="addFriend(newFriend)">Submit</button>
-			          <input type="reset" value="CLEAR" id="reset"/>
+			     <button type="submit" value="SUBMIT" id="submit" ng-click="addFriend(newFriend)" class="button button-stable">Submit</button>
+			          <input type="reset" value="CLEAR" id="reset" class="button button-stable"/>
 			</form>
 	    </ion-content>
 	</div>

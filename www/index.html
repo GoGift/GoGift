@@ -20,17 +20,28 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script type="text/javascript" src="../js/birthday.js" ></script>
-  
-  </head>
+    <style>
+ 
+    .restdays{
+      background-color: yellow;
+    }
+    li{
+      font-size: 80%
+    }
+      </style>
+  </head> 
   <body ng-app="main">
 
+<div class="bar bar-header bar-positive">
+  <button class="button button-icon icon ion-navicon"></button>
+  <h1 class="title">GoGift</h1>
+</div>
     <ion-pane ng-controller="contactsCtrl">
       <ion-header-bar class="bar-stable">
-
-        <h1 class="title">GoGift</h1>
-        <button class="button button-clear" ng-click="openFriendModal()">+</button>
       </ion-header-bar>
       <ion-content>
+
+      <button class="button button-clear" ng-click="openFriendModal()">  + Click to add your friend's birthday.</button>
         <div>
           <div ng-if="contacts.length === 0">You have no friends' birthdays stored! Add your friends using the menu on the top right.</div>
           <div ng-if="contacts.length > 0">
@@ -38,8 +49,9 @@
                         <th ng-repeat="(i,th) in head" ng-class="selectedCls(i)" ng-click="changeSorting(i)">{{th}}</th>
                     </tr>
                     <ul ng-repeat="contact in contacts | orderBy:birthdaySort">
-                        <li>{{contact.fname}} {{contact.lname}}'s birthday is on {{contact.month}}/{{contact.day}} which is in {{birthdaySort(contact)}} days</li>
+                        <li class="item">{{contact.fname}} {{contact.lname}}'s birthday is on {{contact.month}}/{{contact.day}} ( in<i class="restdays"> {{birthdaySort(contact)}} </i> days )</li>
                     </ul>
+
           </div>
         </div>
       </ion-content>
