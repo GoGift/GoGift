@@ -6,9 +6,21 @@
 	        <h1 class="title">Ship a gift</h1>
 	        <button class="button button-clear button-primary" ng-click="closeShippingModal()">X</button>
 	    </header>
-	    <ion-content class="padding has-header">
+	    <ion-content scroll="false" id="happy-birthday" class="padding has-header">
 	    	<!-- Content goes here-->
-	    	<h2>Step 1: Get shipping estimate</h2>
+			<div class="birthday-content">
+				<div class="cake-img"></div>
+				<div class="name">
+					<h2>{{activeContact.fname}} {{activeContact.lname}}</h2>
+					<h3>{{activeContact.month}}/{{activeContact.day}}</h3>
+				</div>
+				<div class="send-btns">
+					<button>Send them gifts now!</button>
+					<p>or</p>
+					<button>send them a video!</button>
+				</div>
+			</div>
+	    	<!-- <h2>Step 1: Get shipping estimate</h2>
 	        <form name="theForm" id="theForm" novalidate method="post">
 			     Gift dimensions:<span class="red">*</span>
 			     <input type="number" id="length" name="length" required ng-model="shipment.l"/> x <input type="number" id="width" name="width" required ng-model="shipment.w"/> x <input type="number" id="height" name="height" required ng-model="shipment.h"/>
@@ -27,7 +39,7 @@
 			   
 			     <button type="submit" value="SUBMIT" id="submit" ng-click="getShipmentData(shipment)">Get estimate</button>
 			          <input type="reset" value="CLEAR" id="reset"/>
-			</form>
+			</form> -->
 	    </ion-content>
 	</div>
 </ion-view>

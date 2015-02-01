@@ -1,0 +1,42 @@
+@import 'mixins';
+#happy-birthday	{
+	background-image: url('../img/birthday-bg.png');
+	background-size: cover;
+}
+.birthday-content	{
+	height: 100%;
+	/*Flexbox vertical-align*/
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.cake-img{
+	width: 80%;
+	height: 0%;
+	padding-top: 80%;
+	background-image: url('../img/cake.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 3rem auto;
+	opacity: .85;
+}
+.name	{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding: 60% 25% 0% 25%;
+}
+.name h2, .name h3	{
+	color: yellow;
+}
+/*send button container*/
+.send-btns	{
+	width: 100%;
+	text-align: center;
+	color: white;
+}
