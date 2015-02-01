@@ -1,0 +1,33 @@
+<ion-view title="Ship">
+	<div id="task-view" class="modal slide-in-up">
+
+	    <header class="bar bar-header bar-secondary">
+	    	<!--TODO: Change title -->
+	        <h1 class="title">Ship a gift</h1>
+	        <button class="button button-clear button-primary" ng-click="closeShippingModal()">X</button>
+	    </header>
+	    <ion-content class="padding has-header">
+	    	<!-- Content goes here-->
+	    	<h2>Step 1: Get shipping estimate</h2>
+	        <form name="theForm" id="theForm" novalidate method="post">
+			     Gift dimensions:<span class="red">*</span>
+			     <input type="number" id="length" name="length" required ng-model="shipment.l"/> x <input type="number" id="width" name="width" required ng-model="shipment.w"/> x <input type="number" id="height" name="height" required ng-model="shipment.h"/>
+			   
+			     Gift weight:
+			     <input type="number" id="weight" name="weight" required ng-model="shipment.weight"/>
+				 Gift origin:
+				 <input type="number" id="origin-zip" name="origin" required ng-model="shipment.origin" /> 
+			     Gift destination:<span class="red">*</span>
+			     <input type="number" id="origin-destination" name="destination" required ng-model="shipment.destination" /> 
+			      
+			   
+			     Gift value:<span class="red">*</span>
+			     <input type="number" id="value" name="value" required min="0" max="31" ng-model="shipment.value"/>
+
+			   
+			     <button type="submit" value="SUBMIT" id="submit" ng-click="getShipmentData(shipment)">Get estimate</button>
+			          <input type="reset" value="CLEAR" id="reset"/>
+			</form>
+	    </ion-content>
+	</div>
+</ion-view>

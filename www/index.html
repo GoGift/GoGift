@@ -27,18 +27,16 @@
     <ion-pane ng-controller="contactsCtrl">
       <ion-header-bar class="bar-stable">
 
-        <h1 class="title">GoGift</h1>
+        <h1 class="title">Your Contacts</h1>
         <button class="button button-clear" ng-click="openFriendModal()">+</button>
       </ion-header-bar>
       <ion-content>
         <div>
           <div ng-if="contacts.length === 0">You have no friends' birthdays stored! Add your friends using the menu on the top right.</div>
           <div ng-if="contacts.length > 0">
-                    <tr>
-                        <th ng-repeat="(i,th) in head" ng-class="selectedCls(i)" ng-click="changeSorting(i)">{{th}}</th>
-                    </tr>
                     <ul ng-repeat="contact in contacts | orderBy:birthdaySort">
                         <li>{{contact.fname}} {{contact.lname}}'s birthday is on {{contact.month}}/{{contact.day}} which is in {{birthdaySort(contact)}} days</li>
+                        <span ng-click="openShippingModal()">Ship Now</span>
                     </ul>
           </div>
         </div>
