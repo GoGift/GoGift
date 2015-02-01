@@ -1,0 +1,48 @@
+<ion-view title="PromptForGift">
+  <div id="task-view" class="modal slide-in-up">
+      <header class="bar bar-header bar-secondary">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+ <script> function formController ($scope) {
+      $scope.master = {firstName: "John", lastName: "Doe"};
+      $scope.reset = function() {
+          $scope.user = angular.copy($scope.master);
+      };
+      $scope.reset();
+  };
+  </script>
+
+          <h1 class="title">Wish your friend a happy birthday!</h1>
+          <button class="button button-clear button-primary" ng-click="closeFriendModal()">Cancel</button>
+      </header>
+      <ion-content class="padding has-header">
+     
+      <ul class="list">
+
+        <li class="item item-checkbox">
+           <label class="checkbox">
+             <input type="checkbox">
+           </label>
+           Send a present.
+        </li>
+
+        <li class="item item-checkbox">
+           <label class="checkbox">
+             <input type="checkbox">
+           </label>
+           Send an email.
+        </li>
+
+        <li class="item item-checkbox">
+           <label class="checkbox">
+             <input type="checkbox">
+           </label>
+           Send a video.
+        </li>
+      </ul>
+
+      </ion-content>
+  </div>
+
+</ion-view>
+
