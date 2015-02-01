@@ -10,22 +10,19 @@
 	    	<!-- Content goes here-->
 	    	<h2>Step 1: Get shipping estimate</h2>
 	        <form name="theForm" id="theForm" novalidate method="post">
-			     Gift dimensions:<span class="red">*</span>
-			     <input type="number" id="length" name="length" required ng-model="shipment.l"/> x <input type="number" id="width" name="width" required ng-model="shipment.w"/> x <input type="number" id="height" name="height" required ng-model="shipment.h"/>
+			     Gift length<span class="red">*</span>
+			     <input type="number" id="length" name="length" required ng-model="shipment.l" placeholder="length"/> Gift width <input type="number" id="width" name="width" required ng-model="shipment.w" placeholder="width"/> Gift height <input type="number" id="height" name="height" required ng-model="shipment.h" placeholder="height"/>
 			   
 			     Gift weight:
-			     <input type="number" id="weight" name="weight" required ng-model="shipment.weight"/>
-				 Gift origin:
-				 <input type="number" id="origin-zip" name="origin" required ng-model="shipment.origin" /> 
+			     <input type="number" id="weight" name="weight" required ng-model="shipment.weight" placeholder="weight" class="item"/>
+				 Gift Origin:
+				 <input type="number" id="origin-zip" name="origin" required ng-model="shipment.origin" placeholder="zip code" class="item"/> 
 			     Gift destination:<span class="red">*</span>
-			     <input type="number" id="origin-destination" name="destination" required ng-model="shipment.destination" /> 
+			     <input type="number" id="origin-destination" name="destination" required ng-model="shipment.destination" placeholder="zip code" class="item"/> 
 			      
-			   
 			     Gift value:<span class="red">*</span>
-			     <input type="number" id="value" name="value" required min="0" max="31" ng-model="shipment.value"/>
-
-			   
-			     <button type="submit" value="SUBMIT" id="submit" ng-click="getShipmentData(shipment)">Get estimate</button>
+			     <input type="number" id="value" name="value" required min="0" max="31" ng-model="shipment.value" placeholder="value" class="item"/>
+			     <button type="submit" value="SUBMIT" id="submit" ng-click="getShipmentData(shipment)">Get estimation</button>
 			          <input type="reset" value="CLEAR" id="reset"/>
 			</form>
 	    </ion-content>
