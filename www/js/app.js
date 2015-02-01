@@ -120,6 +120,12 @@ app.config(['$httpProvider', function($httpProvider) {
   $scope.closeShippingModal = function()  {
     $scope.shippingmodal.hide();
   }
+  $scope.openShippingInfo = function()  {
+    $scope.shipinfo.show();
+  }
+  $scope.closeShippingInfo = function()  {
+    $scope.shipinfo.hide();
+  }
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
   });

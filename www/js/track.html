@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello jQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="track.js"></script>
+
+    <script>
+    var allInputs = $(":input.value" ).children();
+    // var formChildren = $( "form > *" );
+    // $( "#messages" ).text( "Found " + allInputs.length + " inputs and the form has " +  formChildren.length + " children." ); 
+    // $( "form" ).submit(function( event ) {
+    //   event.preventDefault();
+    // });
+   console.log(jQuery.post("https://sandbox.shiphawk.com/api/v1/items/search/table?api_key=9c7a7c694fce3142ca163655178c83c0"));
+    </script>
+    </head>
+
+    <body>
+    <div>
+    <form>
+    <div>
+    <input type="text" value = "Godzilla">
+    <input type="text" value = "300">
+    <input type="text" value = "1800">
+    <input type="text" value = "400">
+    <input type="text" value = "10000">
+    <input type="text" value = "12000">
+    <input id="submit" type="submit">
+    </div>
+    </form>
+    <span></span>
+    </div>
+    </body>
+</html>

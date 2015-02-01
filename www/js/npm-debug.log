@@ -1,0 +1,224 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'azure-cli', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'azure-cli', null ]
+5 verbose cache add name=undefined spec="azure-cli" args=["azure-cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'azure-cli',
+6 verbose parsed url   path: 'azure-cli',
+6 verbose parsed url   href: 'azure-cli' }
+7 silly lockFile e55ea045-azure-cli azure-cli
+8 verbose lock azure-cli /Users/lentebloem/.npm/e55ea045-azure-cli.lock
+9 silly lockFile e55ea045-azure-cli azure-cli
+10 silly lockFile e55ea045-azure-cli azure-cli
+11 verbose addNamed [ 'azure-cli', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile a53364e7-azure-cli azure-cli@
+14 verbose lock azure-cli@ /Users/lentebloem/.npm/a53364e7-azure-cli.lock
+15 silly addNameRange { name: 'azure-cli', range: '*', hasData: false }
+16 verbose request where is /azure-cli
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id d0c9d8984eb7d323
+19 verbose url raw /azure-cli
+20 verbose url resolving [ 'https://registry.npmjs.org/', './azure-cli' ]
+21 verbose url resolved https://registry.npmjs.org/azure-cli
+22 verbose request where is https://registry.npmjs.org/azure-cli
+23 info trying registry request attempt 1 at 14:24:08
+24 verbose etag "7HZ4AK32I2CWJHYG38OB8YSV6"
+25 http GET https://registry.npmjs.org/azure-cli
+26 http 304 https://registry.npmjs.org/azure-cli
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Sat, 31 Jan 2015 22:24:08 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Sat, 31 Jan 2015 22:24:08 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"7HZ4AK32I2CWJHYG38OB8YSV6"',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-lax1431-LAX',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1422743048.454663,VS0,VE307',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/azure-cli from cache
+29 silly addNameRange number 2 { name: 'azure-cli', range: '*', hasData: true }
+30 silly addNameRange versions [ 'azure-cli',
+30 silly addNameRange   [ '0.6.8',
+30 silly addNameRange     '0.6.9',
+30 silly addNameRange     '0.6.10',
+30 silly addNameRange     '0.6.11',
+30 silly addNameRange     '0.6.14',
+30 silly addNameRange     '0.6.15',
+30 silly addNameRange     '0.6.16',
+30 silly addNameRange     '0.6.17',
+30 silly addNameRange     '0.6.18',
+30 silly addNameRange     '0.7.0',
+30 silly addNameRange     '0.7.1',
+30 silly addNameRange     '0.7.2',
+30 silly addNameRange     '0.7.3',
+30 silly addNameRange     '0.7.4',
+30 silly addNameRange     '0.7.5',
+30 silly addNameRange     '0.8.0',
+30 silly addNameRange     '0.8.1',
+30 silly addNameRange     '0.8.2',
+30 silly addNameRange     '0.8.3',
+30 silly addNameRange     '0.8.4',
+30 silly addNameRange     '0.8.5',
+30 silly addNameRange     '0.8.6',
+30 silly addNameRange     '0.8.7',
+30 silly addNameRange     '0.8.8',
+30 silly addNameRange     '0.8.9',
+30 silly addNameRange     '0.8.10',
+30 silly addNameRange     '0.8.11',
+30 silly addNameRange     '0.8.12',
+30 silly addNameRange     '0.8.13',
+30 silly addNameRange     '0.8.14' ] ]
+31 verbose addNamed [ 'azure-cli', '0.8.14' ]
+32 verbose addNamed [ '0.8.14', '0.8.14' ]
+33 silly lockFile 19ca4715-azure-cli-0-8-14 azure-cli@0.8.14
+34 verbose lock azure-cli@0.8.14 /Users/lentebloem/.npm/19ca4715-azure-cli-0-8-14.lock
+35 silly lockFile 19ca4715-azure-cli-0-8-14 azure-cli@0.8.14
+36 silly lockFile 19ca4715-azure-cli-0-8-14 azure-cli@0.8.14
+37 silly lockFile a53364e7-azure-cli azure-cli@
+38 silly lockFile a53364e7-azure-cli azure-cli@
+39 silly resolved [ { name: 'azure-cli',
+39 silly resolved     author: { name: 'Microsoft Corporation' },
+39 silly resolved     contributors:
+39 silly resolved      [ [Object],
+39 silly resolved        [Object],
+39 silly resolved        [Object],
+39 silly resolved        [Object],
+39 silly resolved        [Object],
+39 silly resolved        [Object],
+39 silly resolved        [Object] ],
+39 silly resolved     version: '0.8.14',
+39 silly resolved     description: 'Microsoft Azure Cross Platform Command Line tool',
+39 silly resolved     tags: [ 'azure', 'cli' ],
+39 silly resolved     keywords: [ 'node', 'azure', 'cli', 'cloud hosting', 'deployment' ],
+39 silly resolved     main: './lib/cli.js',
+39 silly resolved     preferGlobal: 'true',
+39 silly resolved     engines: { node: '>= 0.8.26' },
+39 silly resolved     licenses: [ [Object] ],
+39 silly resolved     dependencies:
+39 silly resolved      { 'adal-node': '0.1.7',
+39 silly resolved        async: '0.2.7',
+39 silly resolved        azure: '0.10.3',
+39 silly resolved        'azure-common': '0.9.10',
+39 silly resolved        'azure-gallery': '2.0.0-pre.13',
+39 silly resolved        'azure-mgmt-authorization': '0.9.0-pre.4',
+39 silly resolved        'azure-mgmt-resource': '2.0.0-pre.14',
+39 silly resolved        'azure-storage': '0.4.1',
+39 silly resolved        'azure-storage-legacy': '0.9.13',
+39 silly resolved        'azure-extra': '0.1.5',
+39 silly resolved        mime: '~1.2.4',
+39 silly resolved        colors: '0.x.x',
+39 silly resolved        commander: '1.0.4',
+39 silly resolved        'easy-table': '0.0.1',
+39 silly resolved        'event-stream': '3.1.5',
+39 silly resolved        eyes: '0.x.x',
+39 silly resolved        github: '0.1.6',
+39 silly resolved        kuduscript: '0.1.11',
+39 silly resolved        moment: '2.6.0',
+39 silly resolved        'node-uuid': '1.2.0',
+39 silly resolved        omelette: '0.1.0',
+39 silly resolved        request: '2.27.0',
+39 silly resolved        streamline: '0.4.5',
+39 silly resolved        through: '2.3.4',
+39 silly resolved        tunnel: '0.0.2',
+39 silly resolved        underscore: '1.4.x',
+39 silly resolved        validator: '~3.1.0',
+39 silly resolved        winston: '0.6.x',
+39 silly resolved        wordwrap: '0.0.2',
+39 silly resolved        xml2js: '0.1.x',
+39 silly resolved        xmlbuilder: '0.4.x',
+39 silly resolved        'readable-stream': '~1.0.0',
+39 silly resolved        'openssl-wrapper': '0.2.1',
+39 silly resolved        'caller-id': '0.1.x' },
+39 silly resolved     devDependencies:
+39 silly resolved      { mocha: '1.16.0',
+39 silly resolved        jshint: '>= 2.1.4',
+39 silly resolved        sinon: '*',
+39 silly resolved        should: '3.3.2',
+39 silly resolved        nock: '0.16',
+39 silly resolved        'winston-memory': '*',
+39 silly resolved        cucumber: '~0.3.0' },
+39 silly resolved     homepage: 'https://github.com/Azure/azure-xplat-cli',
+39 silly resolved     repository: { type: 'git', url: 'git@github.com:Azure/azure-xplat-cli.git' },
+39 silly resolved     bugs: { url: 'https://github.com/Azure/azure-xplat-cli/issues' },
+39 silly resolved     scripts:
+39 silly resolved      { test: 'npm -s run-script jshint && npm -s run-script unit && npm -s run-script unit-arm',
+39 silly resolved        unit: 'node scripts/unit.js testlist.txt',
+39 silly resolved        'unit-mc': 'node scripts/unit.js --mc testlistmc.txt',
+39 silly resolved        'unit-arm': 'node scripts/unit.js testlistarm.txt',
+39 silly resolved        jshint: 'jshint lib --jslint-reporter --extra-ext ._js',
+39 silly resolved        preci: 'jshint lib --reporter=checkstyle --extra-ext ._js > checkstyle-result.xml',
+39 silly resolved        ci: 'node scripts/unit.js testlist.txt -xunit',
+39 silly resolved        preacceptance: 'node scripts/cuke-environment.js setup',
+39 silly resolved        acceptance: 'node node_modules/cucumber/bin/cucumber.js',
+39 silly resolved        postacceptance: 'node scripts/cuke-environment.js teardown',
+39 silly resolved        'extract-labels': 'node scripts/extract-labels' },
+39 silly resolved     bin: { azure: './bin/azure' },
+39 silly resolved     gitHead: '22747e0619d033f5accc2f174ac13fb01d254b0c',
+39 silly resolved     _id: 'azure-cli@0.8.14',
+39 silly resolved     _shasum: '7651ee50f3913fa28db994a4b7c37ba85e4e8bc2',
+39 silly resolved     _from: 'azure-cli@',
+39 silly resolved     _npmVersion: '2.3.0',
+39 silly resolved     _nodeVersion: '0.10.23',
+39 silly resolved     _npmUser: { name: 'windowsazure', email: 'azuresdk@outlook.com' },
+39 silly resolved     maintainers: [ [Object] ],
+39 silly resolved     dist:
+39 silly resolved      { shasum: '7651ee50f3913fa28db994a4b7c37ba85e4e8bc2',
+39 silly resolved        tarball: 'http://registry.npmjs.org/azure-cli/-/azure-cli-0.8.14.tgz' },
+39 silly resolved     directories: {},
+39 silly resolved     _resolved: 'https://registry.npmjs.org/azure-cli/-/azure-cli-0.8.14.tgz',
+39 silly resolved     readme: 'ERROR: No README data found!' } ]
+40 info install azure-cli@0.8.14 into /usr/local/lib
+41 info installOne azure-cli@0.8.14
+42 verbose lib/node_modules/azure-cli unbuild
+43 verbose tar unpack /Users/lentebloem/.npm/azure-cli/0.8.14/package.tgz
+44 silly lockFile 5e0be1a0-local-lib-node-modules-azure-cli tar:///usr/local/lib/node_modules/azure-cli
+45 verbose lock tar:///usr/local/lib/node_modules/azure-cli /Users/lentebloem/.npm/5e0be1a0-local-lib-node-modules-azure-cli.lock
+46 silly lockFile fc4a79fc-npm-azure-cli-0-8-14-package-tgz tar:///Users/lentebloem/.npm/azure-cli/0.8.14/package.tgz
+47 verbose lock tar:///Users/lentebloem/.npm/azure-cli/0.8.14/package.tgz /Users/lentebloem/.npm/fc4a79fc-npm-azure-cli-0-8-14-package-tgz.lock
+48 silly gunzTarPerm modes [ '755', '644' ]
+49 error Error: EACCES, mkdir '/usr/local/lib/node_modules/azure-cli'
+49 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/azure-cli']
+49 error   errno: 3,
+49 error   code: 'EACCES',
+49 error   path: '/usr/local/lib/node_modules/azure-cli',
+49 error   fstream_type: 'Directory',
+49 error   fstream_path: '/usr/local/lib/node_modules/azure-cli',
+49 error   fstream_class: 'DirWriter',
+49 error   fstream_stack:
+49 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+49 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+49 error      'Object.oncomplete (fs.js:107:15)' ] }
+50 error Please try running this command again as root/Administrator.
+51 error System Darwin 14.0.0
+52 error command "node" "/usr/local/bin/npm" "install" "azure-cli" "-g"
+53 error cwd /Users/lentebloem/github/GoGift/www/js
+54 error node -v v0.10.32
+55 error npm -v 1.4.28
+56 error path /usr/local/lib/node_modules/azure-cli
+57 error fstream_path /usr/local/lib/node_modules/azure-cli
+58 error fstream_type Directory
+59 error fstream_class DirWriter
+60 error code EACCES
+61 error errno 3
+62 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/azure-cli'
+63 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+63 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+63 error fstream_stack Object.oncomplete (fs.js:107:15)
+64 verbose exit [ 3, true ]
