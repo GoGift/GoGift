@@ -46,7 +46,7 @@ app.config(['$httpProvider', function($httpProvider) {
         day: d,
         year: y
       }
-    }
+    },
   }
 })
 .controller('contactsCtrl', ['$scope', 'Friends', '$ionicModal', function($scope, Friends, $ionicModal){
@@ -113,7 +113,8 @@ app.config(['$httpProvider', function($httpProvider) {
   $scope.closeFriendModal = function()  {
     $scope.friendmodal.hide();
   }
-  $scope.openShippingModal = function()  {
+  $scope.openShippingModal = function(contact)  {
+    $scope.activeContact = contact;
     $scope.shippingmodal.show();
   }
   $scope.closeShippingModal = function()  {

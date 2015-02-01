@@ -48,7 +48,7 @@
           <div ng-if="contacts.length === 0">You have no friends' birthdays stored! Add your friends using the menu on the top right.</div>
           <div ng-if="contacts.length > 0">
                     <ul ng-repeat="contact in contacts | orderBy:birthdaySort">
-                        <li class="item">{{contact.fname}} {{contact.lname}}'s birthday is on {{contact.month}}/{{contact.day}} ( in<i class="restdays"> {{birthdaySort(contact)}} </i> days )</li>
+                        <li class="item" ng-click="openShippingModal(contact)">{{contact.fname}} {{contact.lname}}'s birthday is on {{contact.month}}/{{contact.day}} ( in<i class="restdays"> {{birthdaySort(contact)}} </i> days )</li>
                     </ul>
 
           </div>
