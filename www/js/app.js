@@ -107,6 +107,18 @@ app.config(['$httpProvider', function($httpProvider) {
     }).then(function(modal) {
       $scope.shippingmodal = modal
     });
+  $ionicModal.fromTemplateUrl('templates/shipinfo.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.shipinfo = modal
+    });
+  $ionicModal.fromTemplateUrl('templates/email.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.emailmodal = modal
+    });
   $scope.openFriendModal = function() {
     $scope.friendmodal.show();
   }
@@ -125,6 +137,29 @@ app.config(['$httpProvider', function($httpProvider) {
   }
   $scope.closeShippingInfo = function()  {
     $scope.shipinfo.hide();
+  }
+  $scope.sendEmailModal = function(){
+    $scope.emailmodal.show();
+  }
+  $scope.closeEmailModal = function()  {
+    $scope.emailmodal.hide();
+  }
+  $scope.sendEmail = function(s) {
+    var e = $(emailAddress).value;
+    console.log(e);
+    // My API (2) (POST 173.37.40.112/api/config/v1/mail/test/:emailAddress)
+    $.ajax({
+        url: "173.37.40.112/api/config/v1/mail/test/:" + e,
+        type: "POST",
+        success:function(data, textStatus, jqXHR){
+            console.log("HTTP Request Succeeded: " + jqXHR.status);
+            console.log(data);
+            $("promptwords").value = "Email successfully sent!";
+        },
+        error:function(jqXHR, textStatus, errorThrown){
+            console.log("HTTP Request Failed");
+        }
+    });
   }
   $scope.$on('$destroy', function() {
     $scope.modal.remove();

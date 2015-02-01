@@ -3,10 +3,10 @@
 
 	    <header class="bar bar-header bar-secondary">
 	    	<!--TODO: Change title -->
-	        <h1 class="title">Ship a gift</h1>
-	        <button class="button button-clear button-primary" ng-click="closeShippinfo()">X</button>
+	        <h1 class="title">Enter Shipping Information</h1>
+	        <button class="button button-clear button-primary" ng-click="closeShippingInfo()">X</button>
 	    </header>
-	    <!-- <ion-content scroll="false" id="happy-birthday" class="padding has-header"> -->
+	    <ion-content scroll="false" id="happy-birthday" class="padding has-header">
 	    	<!-- Content goes here-->
 			<!-- <div class="birthday-content">
 				<div class="cake-img"></div>
@@ -34,6 +34,7 @@
 			      
 			     Gift value:<span class="red">*</span>
 			     <input type="number" id="value" name="value" required min="0" max="31" ng-model="shipment.value" placeholder="value" class="item"/>
+			     <h3>Service provided by ShipHawk</h3>
 			     <button type="submit" value="SUBMIT" id="submit" ng-click="getShipmentData(shipment)">Get estimation</button>
 			          <input type="reset" value="CLEAR" id="reset"/>
 			</form>

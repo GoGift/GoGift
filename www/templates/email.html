@@ -1,0 +1,24 @@
+<ion-view title="email">
+	<div id="task-view" class="modal slide-in-up">
+	    <header class="bar bar-header bar-secondary">
+	    	<!--TODO: Change title -->
+	        <h1 class="title">Enter Shipping Information</h1>
+	        <button class="button button-clear button-primary" ng-click="closeEmailModal()">X</button>
+	    </header>
+	    <ion-content scroll="false" id="happy-birthday" class="padding has-header">
+	    	<!-- Content goes here-->
+			<div class="name">
+				<h2 id="promptwords">Say happy birthday to {{activeContact.fname}} {{activeContact.lname}} via email now!</h2>
+			</div>
+			<div class="list">
+			  <label class="item item-input">
+			    <span class="input-label">Enter email address:</span>
+			    <input type="text" id="emailAddress" name="emailAddress" placeholder="example@mail.com" value=" " autocomplete="on">
+			  </label>
+			</div>
+			 </br>
+				<button ng-click="sendEmail()" class="button button-full button-positive">Send email now!</button>
+			
+	    </ion-content>
+	</div>
+</ion-view>
